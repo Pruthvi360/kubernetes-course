@@ -69,6 +69,8 @@ kubectl config --kubeconfig=~/.kube/config set-cluster devcluster --server=https
 ```
 kubectl config --kubeconfig=~/.kube/config set-credentials pruthvi --client-certificate=pruthvi.crt --client-key=pruthvi.key
 ```
-
-
+## After defining all, use the below command to define the new context
+```
+kubectl set-context devcluster --cluster=devcluster --namespace=devspace --user=pruthvi
+```
 
