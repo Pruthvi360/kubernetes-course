@@ -39,3 +39,20 @@ kubeadm join 10.128.0.2:6443 --token vxptv5.403opgd56k7go2xl         --discovery
 ```
 sudo kubeadm token create --print-join-command
 ```
+
+## Deploying the Nginx
+```
+kubectl get pods -n kube-system
+kubectl get nodes
+```
+
+#Testing the cluster
+```
+kubectl create deployment nginx-app --image=nginx --replicas=2
+kubectl get deployment nginx-app
+kubectl expose deployment nginx-app --type=NodePort --port=80
+kubectl get svc nginx-app
+kubectl describe svc nginx-app
+
+curl http://192.168.1.174:31246
+```
