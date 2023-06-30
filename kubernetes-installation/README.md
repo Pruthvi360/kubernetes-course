@@ -56,3 +56,19 @@ kubectl describe svc nginx-app
 
 curl http://192.168.1.174:31246
 ```
+
+## Configuring the kubernetes client
+```
+kubectl config view
+```
+## Certificate of CA that gas signed its keys and endpoint
+```
+kubectl config --kubeconfig=~/.kube/config set-cluster devcluster --server=https://10.128.0.2 --certificate-authority=clusterca.rt
+```
+## Generating Certificate CA for the user PRUTHVI
+```
+kubectl config --kubeconfig=~/.kube/config set-credentials pruthvi --client-certificate=pruthvi.crt --client-key=pruthvi.key
+```
+
+
+
