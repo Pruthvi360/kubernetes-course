@@ -1,3 +1,16 @@
+## Container Networking 
+| Network Mode     | Description                                                                                      |
+|------------------|--------------------------------------------------------------------------------------------------|
+| None             | No networking. Disables networking for the container. Use this mode when the container does not need network access. |
+| Bridge           | The container runs in a private network internal to the host. Communication with other containers in the network is open. Communication with services outside the host goes through NAT before exiting the host. Bridge mode is the default mode of networking when the --net option is not specified. |
+| Host             | The container shares the same IP address and network namespace as the host. Processes running inside this container have the same network capabilities as services running directly on the host. This mode is useful if the container needs access to network resources on the host. The container loses the benefit of network segmentation with this mode of networking. |
+| Macvlan          | Macvlan uses a parent interface to create multiple subinterfaces with different MAC and IP addresses. Macvlan networks are segmented from each other, providing access within a network, but not between networks. Macvlan has four types: Private, VEPA, Bridge (default), and Passthrough. |
+| IPvlan           | IPvlan is similar to Macvlan but does not assign MAC addresses to subinterfaces. All subinterfaces share the parent's MAC address but use different IP addresses. IPvlan has two modes: L2 (layer 2) and L3 (layer 3). |
+| Overlay          | Allows for the extension of the same network across hosts in a container cluster. The overlay network sits on top of the physical networks. |
+| Custom           | Similar to bridge networking but uses a bridge explicitly created for the container. Enables communication with multiple networks. |
+
+
+
 ## DOCKER
 
 ![image](https://github.com/Pruthvi360/kubernetes-course/assets/107435692/be1dc542-2353-4858-9d0b-c4a8fd3474cc)
