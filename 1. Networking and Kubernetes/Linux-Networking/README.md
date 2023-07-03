@@ -103,3 +103,58 @@ NAT rewrites source and destination addresses.
 DR encapsulates IP datagrams within IP datagrams.
 IP tunneling directly routes packets to the backend server by rewriting the MAC address of the data frame with the MAC address of the selected backend server.
 ```
+
+## Cheat sheet of common debugging cases and tools
+
+| Case                      | Tools                                                             |
+|---------------------------|-------------------------------------------------------------------|
+| Checking connectivity     | traceroute, ping, telnet, netcat                                  |
+| Port scanning             | nmap                                                              |
+| Checking DNS records      | dig, commands mentioned in "Checking Connectivity"                |
+| Checking HTTP/1           | cURL, telnet, netcat                                              |
+| Checking HTTPS            | OpenSSL, cURL                                                     |
+| Checking listening programs | netstat                                                           |
+
+## Useful traceroute options
+
+| Option          | Syntax                | Description                                                                                                        |
+|-----------------|-----------------------|--------------------------------------------------------------------------------------------------------------------|
+| First TTL       | -f <TTL>, -M <TTL>    | Set the starting IP TTL (default value: 1). Setting the TTL to n will cause traceroute to not report the first n-1 hosts en route to the destination. |
+| Max TTL         | -m <TTL>              | Set the maximum TTL, i.e., the maximum number of hosts that traceroute will attempt to route through.             |
+| Protocol        | -P <protocol>         | Send packets of the specified protocol (TCP, UDP, ICMP, and sometimes other options). UDP is the default.         |
+| Source address  | -s <address>          | Specify the source IP address of outgoing packets.                                                                 |
+| Wait            | -w <seconds>          | Set the time to wait for a probe response.                                                                          |
+
+
+## shows common dig options.
+
+| Option        | Syntax               | Description                                                                                    |
+|---------------|----------------------|------------------------------------------------------------------------------------------------|
+| IPv4          | -4                   | Use IPv4 only.                                                                                 |
+| IPv6          | -6                   | Use IPv6 only.                                                                                 |
+| Address       | -b <address>[#<port>] | Specify the address to make a DNS query to. Port can optionally be included, preceded by #.    |
+| Port          | -p <port>            | Specify the port to query, in case DNS is exposed on a nonstandard port. Default is 53.        |
+| Domain        | -q <domain>          | The domain name to query.                                                                      |
+| Record Type   | -t <type>            | The DNS record type to query.                                                                  |
+
+## shows common netstat options.
+
+| Option               | Syntax     | Description                                                                                                                   |
+|----------------------|------------|-------------------------------------------------------------------------------------------------------------------------------|
+| Show all sockets     | netstat -a | Shows all sockets, not only open connections.                                                                                 |
+| Show statistics      | netstat -s | Shows networking statistics. By default, netstat shows stats from all protocols.                                              |
+| Show listening sockets | netstat -l | Shows sockets that are listening. This is an easy way to find running services.                                                |
+| TCP                  | netstat -t | The -t flag shows only TCP data. It can be used with other flags, e.g., -lt (show sockets listening with TCP).               |
+| UDP                  | netstat -u | The -u flag shows only UDP data. It can be used with other flags, e.g., -lu (show sockets listening with UDP).               |
+
+## netcat
+```
+netcat <address> <port>
+```
+
+## OpenSSL
+```
+openssl list --commands
+openssl [sub-command] [arguments] [options]
+openssl s_client -connect k8s.io:443
+```
