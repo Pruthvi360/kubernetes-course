@@ -41,3 +41,53 @@ Below is a list of commonly used `kubectl` commands along with their syntax and 
 | top | `kubectl top [OPTIONS] [POD | TYPE/NAME] [CONTAINER]` | Display resource usage. |
 | uncordon | `kubectl uncordon [OPTIONS] NODE` | Mark a node as schedulable. |
 | version | `kubectl version [OPTIONS]` | Print the client and server versions. |
+
+## ALL OTHER INFREQUENT COMMANDS
+
+| Command | Syntax | Description |
+|---------|--------|-------------|
+| api-resources | `kubectl api-resources [OPTIONS]` | Print the supported API resources on the server. |
+| api-versions | `kubectl api-versions [OPTIONS]` | Print the supported API versions on the server, in the form of "group/version". |
+| auth can-i | `kubectl auth can-i [OPTIONS] VERB [TYPE | TYPE/NAME | TYPE/NAME/RESOURCE]` | Check if the current user can perform an action on a resource. |
+| auth reconcile | `kubectl auth reconcile [OPTIONS]` | Reconcile the authorization policy for a user. |
+| certificate approve | `kubectl certificate approve [OPTIONS] NAME` | Approve a certificate signing request (CSR). |
+| certificate deny | `kubectl certificate deny [OPTIONS] NAME` | Deny a certificate signing request (CSR). |
+| certificate renew | `kubectl certificate renew [OPTIONS] NAME` | Renew a certificate signing request (CSR). |
+| cluster-info dump | `kubectl cluster-info dump [OPTIONS]` | Dump cluster info to stdout. |
+| completion bash | `kubectl completion bash [OPTIONS]` | Output shell completion for bash. |
+| completion zsh | `kubectl completion zsh [OPTIONS]` | Output shell completion for zsh. |
+| convert | `kubectl convert [OPTIONS] FILE` | Convert config files between different API versions. |
+| debug | `kubectl debug [OPTIONS] POD [-c CONTAINER]` | Create a debugging session for a running container in a pod. |
+| describe csr | `kubectl describe csr [NAME]` | Show details about a certificate signing request (CSR). |
+| drain | `kubectl drain [OPTIONS] NODE` | Drain a node in preparation for maintenance. |
+| explain | `kubectl explain [OPTIONS] [KIND]` | Documentation of resources. |
+| get all | `kubectl get all [OPTIONS] [NAME | -l LABEL]` | Display all resources in the cluster. |
+| get certificatesigningrequests | `kubectl get certificatesigningrequests [OPTIONS] [NAME | -l LABEL]` | List certificate signing requests (CSRs). |
+| get componentstatuses | `kubectl get componentstatuses [OPTIONS] [NAME | -l LABEL]` | List the condition of different components running on the cluster. |
+| get configmap | `kubectl get configmap [OPTIONS] [NAME | -l LABEL]` | Show information about a specific config map or a list of config maps. |
+| get csr | `kubectl get csr [OPTIONS] [NAME | -l LABEL]` | List certificate signing requests (CSRs). |
+| get daemonset | `kubectl get daemonset [OPTIONS] [NAME | -l LABEL]` | List daemon sets. |
+| get deployment | `kubectl get deployment [OPTIONS] [NAME | -l LABEL]` | List deployments. |
+| get events | `kubectl get events [OPTIONS] [NAME | -l LABEL]` | List events. |
+| get ingress | `kubectl get ingress [OPTIONS] [NAME | -l LABEL]` | List ingress. |
+| get job | `kubectl get job [OPTIONS] [NAME | -l LABEL]` | List jobs. |
+| get namespace | `kubectl get namespace [OPTIONS] [NAME | -l LABEL]` | List namespaces. |
+| get node | `kubectl get node [OPTIONS] [NAME | -l LABEL]` | List nodes. |
+| get persistentvolume | `kubectl get persistentvolume [OPTIONS] [NAME | -l LABEL]` | List persistent volumes. |
+| get pod | `kubectl get pod [OPTIONS] [NAME | -l LABEL]` | List pods. |
+| get replicaset | `kubectl get replicaset [OPTIONS] [NAME | -l LABEL]` | List replica sets. |
+| get secret | `kubectl get secret [OPTIONS] [NAME | -l LABEL]` | List secrets. |
+| get service | `kubectl get service [OPTIONS] [NAME | -l LABEL]` | List services. |
+| get statefulset | `kubectl get statefulset [OPTIONS] [NAME | -l LABEL]` | List stateful sets. |
+| get storageclass | `kubectl get storageclass [OPTIONS] [NAME | -l LABEL]` | List storage classes. |
+| get user | `kubectl get user [OPTIONS] [NAME | -l LABEL]` | List users. |
+| get volumeattachment | `kubectl get volumeattachment [OPTIONS] [NAME | -l LABEL]` | List volume attachments. |
+| label | `kubectl label [OPTIONS] RESOURCE NAME KEY=VALUE` | Add or update labels on a resource. |
+| logs | `kubectl logs [OPTIONS] POD [-c CONTAINER]` | Print the logs for a container in a pod. |
+| rollout history | `kubectl rollout history [OPTIONS] RESOURCE NAME` | View rollout history of a resource. |
+| rollout pause | `kubectl rollout pause [OPTIONS] RESOURCE NAME` | Pause the rollout of a resource. |
+| rollout resume | `kubectl rollout resume [OPTIONS] RESOURCE NAME` | Resume the rollout of a paused resource. |
+| rollout status | `kubectl rollout status [OPTIONS] RESOURCE NAME` | Show the status of a rollout. |
+| rollout undo | `kubectl rollout undo [OPTIONS] RESOURCE NAME` | Undo a previous rollout of a resource. |
+| rollout restart | `kubectl rollout restart [OPTIONS] RESOURCE NAME` | Restart a rollout of a resource. |
+
