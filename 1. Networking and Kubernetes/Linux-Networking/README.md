@@ -3,7 +3,8 @@
 ## The Bridge Interface
  The bridge interface allows system administrators to create multiple layer 2 networks on a single host.
  The bridge functions like a network switch between network interfaces on a host
-![image](https://github.com/Pruthvi360/kubernetes-course/assets/107435692/4bc2fb75-6b02-4d70-a9b4-2710922b32df)
+![image](https://github.com/Pruthvi360/kubernetes-course/assets/107435692/92852589-1bd6-45a0-ae70-29299b6af116)
+
 
 # Creating bridge interface and connecting veth pair
 # # Add a new bridge interface named br0.
