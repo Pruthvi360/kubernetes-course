@@ -1,5 +1,4 @@
 # ASN TABLE
-```
 | Number | Bits | Description                                     | Reference       |
 |--------|------|-------------------------------------------------|-----------------|
 | 0      | 16   | Reserved                                        | RFC 1930, RFC 7607 |
@@ -15,4 +14,4 @@
 | 4200000000–4294967294 | 32 | Reserved for private use                  | RFC 6996        |
 | 4294967295 | 32 | Reserved                                        | RFC 7300        |
 
-```
+
