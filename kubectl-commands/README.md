@@ -61,27 +61,27 @@ Below is a list of commonly used `kubectl` commands along with their syntax and 
 | describe csr | `kubectl describe csr [NAME]` | Show details about a certificate signing request (CSR). |
 | drain | `kubectl drain [OPTIONS] NODE` | Drain a node in preparation for maintenance. |
 | explain | `kubectl explain [OPTIONS] [KIND]` | Documentation of resources. |
-| get all | `kubectl get all [OPTIONS] [NAME | -l LABEL]` | Display all resources in the cluster. |
-| get certificatesigningrequests | `kubectl get certificatesigningrequests [OPTIONS] [NAME | -l LABEL]` | List certificate signing requests (CSRs). |
-| get componentstatuses | `kubectl get componentstatuses [OPTIONS] [NAME | -l LABEL]` | List the condition of different components running on the cluster. |
-| get configmap | `kubectl get configmap [OPTIONS] [NAME | -l LABEL]` | Show information about a specific config map or a list of config maps. |
-| get csr | `kubectl get csr [OPTIONS] [NAME | -l LABEL]` | List certificate signing requests (CSRs). |
-| get daemonset | `kubectl get daemonset [OPTIONS] [NAME | -l LABEL]` | List daemon sets. |
-| get deployment | `kubectl get deployment [OPTIONS] [NAME | -l LABEL]` | List deployments. |
-| get events | `kubectl get events [OPTIONS] [NAME | -l LABEL]` | List events. |
-| get ingress | `kubectl get ingress [OPTIONS] [NAME | -l LABEL]` | List ingress. |
-| get job | `kubectl get job [OPTIONS] [NAME | -l LABEL]` | List jobs. |
-| get namespace | `kubectl get namespace [OPTIONS] [NAME | -l LABEL]` | List namespaces. |
-| get node | `kubectl get node [OPTIONS] [NAME | -l LABEL]` | List nodes. |
-| get persistentvolume | `kubectl get persistentvolume [OPTIONS] [NAME | -l LABEL]` | List persistent volumes. |
-| get pod | `kubectl get pod [OPTIONS] [NAME | -l LABEL]` | List pods. |
-| get replicaset | `kubectl get replicaset [OPTIONS] [NAME | -l LABEL]` | List replica sets. |
-| get secret | `kubectl get secret [OPTIONS] [NAME | -l LABEL]` | List secrets. |
-| get service | `kubectl get service [OPTIONS] [NAME | -l LABEL]` | List services. |
-| get statefulset | `kubectl get statefulset [OPTIONS] [NAME | -l LABEL]` | List stateful sets. |
-| get storageclass | `kubectl get storageclass [OPTIONS] [NAME | -l LABEL]` | List storage classes. |
-| get user | `kubectl get user [OPTIONS] [NAME | -l LABEL]` | List users. |
-| get volumeattachment | `kubectl get volumeattachment [OPTIONS] [NAME | -l LABEL]` | List volume attachments. |
+| get all | `kubectl get all [OPTIONS] [NAME  -l LABEL]` | Display all resources in the cluster. |
+| get certificatesigningrequests | `kubectl get certificatesigningrequests [OPTIONS] [NAME  -l LABEL]` | List certificate signing requests (CSRs). |
+| get componentstatuses | `kubectl get componentstatuses [OPTIONS] [NAME  -l LABEL]` | List the condition of different components running on the cluster. |
+| get configmap | `kubectl get configmap [OPTIONS] [NAME  -l LABEL]` | Show information about a specific config map or a list of config maps. |
+| get csr | `kubectl get csr [OPTIONS] [NAME  -l LABEL]` | List certificate signing requests (CSRs). |
+| get daemonset | `kubectl get daemonset [OPTIONS] [NAME  -l LABEL]` | List daemon sets. |
+| get deployment | `kubectl get deployment [OPTIONS] [NAME  -l LABEL]` | List deployments. |
+| get events | `kubectl get events [OPTIONS] [NAME  -l LABEL]` | List events. |
+| get ingress | `kubectl get ingress [OPTIONS] [NAME  -l LABEL]` | List ingress. |
+| get job | `kubectl get job [OPTIONS] [NAME  -l LABEL]` | List jobs. |
+| get namespace | `kubectl get namespace [OPTIONS] [NAME  -l LABEL]` | List namespaces. |
+| get node | `kubectl get node [OPTIONS] [NAME  -l LABEL]` | List nodes. |
+| get persistentvolume | `kubectl get persistentvolume [OPTIONS] [NAME  -l LABEL]` | List persistent volumes. |
+| get pod | `kubectl get pod [OPTIONS] [NAME  -l LABEL]` | List pods. |
+| get replicaset | `kubectl get replicaset [OPTIONS] [NAME  -l LABEL]` | List replica sets. |
+| get secret | `kubectl get secret [OPTIONS] [NAME  -l LABEL]` | List secrets. |
+| get service | `kubectl get service [OPTIONS] [NAME  -l LABEL]` | List services. |
+| get statefulset | `kubectl get statefulset [OPTIONS] [NAME  -l LABEL]` | List stateful sets. |
+| get storageclass | `kubectl get storageclass [OPTIONS] [NAME  -l LABEL]` | List storage classes. |
+| get user | `kubectl get user [OPTIONS] [NAME  -l LABEL]` | List users. |
+| get volumeattachment | `kubectl get volumeattachment [OPTIONS] [NAME  -l LABEL]` | List volume attachments. |
 | label | `kubectl label [OPTIONS] RESOURCE NAME KEY=VALUE` | Add or update labels on a resource. |
 | logs | `kubectl logs [OPTIONS] POD [-c CONTAINER]` | Print the logs for a container in a pod. |
 | rollout history | `kubectl rollout history [OPTIONS] RESOURCE NAME` | View rollout history of a resource. |
