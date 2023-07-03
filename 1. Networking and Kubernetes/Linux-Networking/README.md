@@ -83,3 +83,15 @@ iptables -A OUTPUT -p tcp --dport 22 -j LOG --log-level info --log-prefix "ssh-o
 | POSTROUTING     |   ✓   |   ✓    |   ✓   |        |
 
 **NOTE** : iptables -L -t <table>
+
+## Some common iptables match types
+
+| Match Type    | Flag(s)                         | Description                                                     |
+|---------------|---------------------------------|-----------------------------------------------------------------|
+| Source        | -s, --src, --source             | Matches packets with the specified source address               |
+| Destination   | -d, --dest, --destination       | Matches packets with the specified destination address          |
+| Protocol      | -p, --protocol                  | Matches packets with the specified protocol                     |
+| In Interface  | -i, --in-interface              | Matches packets that entered via the specified interface        |
+| Out Interface | -o, --out-interface             | Matches packets that are leaving via the specified interface    |
+| State         | -m state --state <states>       | Matches packets from connections that are in specified states    |
+
