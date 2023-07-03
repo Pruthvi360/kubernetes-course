@@ -96,3 +96,10 @@ iptables -A OUTPUT -p tcp --dport 22 -j LOG --log-level info --log-prefix "ssh-o
 | Out Interface | -o, --out-interface             | Matches packets that are leaving via the specified interface    |
 | State         | -m state --state <states>       | Matches packets from connections that are in specified states    |
 
+## LoadBalancing in Linux OR Kubernetes 
+IPVS modes supported in Kubernetes
+```
+NAT rewrites source and destination addresses.
+DR encapsulates IP datagrams within IP datagrams.
+IP tunneling directly routes packets to the backend server by rewriting the MAC address of the data frame with the MAC address of the selected backend server.
+```
