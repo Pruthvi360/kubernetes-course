@@ -32,4 +32,11 @@
 
 ![image](https://github.com/Pruthvi360/kubernetes-course/assets/107435692/3d155a1b-b1d4-49e8-a645-68b4aa175c4f)
 
+# Layer 2 Frame
+
+![image](https://github.com/Pruthvi360/kubernetes-course/assets/107435692/0cf4bf63-483d-4738-be7d-c389a7c61a11)
+
+# Typical Packet Visualization
+
+![image](https://github.com/Pruthvi360/kubernetes-course/assets/107435692/21cac681-ccc4-4a61-9e86-655ef331459b)
 
